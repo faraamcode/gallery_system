@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en" data-ng-app="flicksApps">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="EsaEz0m1X8s1IHnzxBuHTImaVSsGgBC8IDG5H40O">
+
+    <title>Kwara State University, Malete</title>
+    <link rel="icon" href="https://myportal.kwasu.edu.ng/public/img/kwasu.png" type="image/png" />
+    <link rel="stylesheet" href="https://myportal.kwasu.edu.ng/public/css/vendor.css" />
+    <link rel="stylesheet" href="https://myportal.kwasu.edu.ng/public/css/app.css" />
+    <link href="https://myportal.kwasu.edu.ng/public/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script>
+        window.Laravel ={"csrfToken":"EsaEz0m1X8s1IHnzxBuHTImaVSsGgBC8IDG5H40O"}    </script>
+
+</head>
+<body class="gray-bg" style="background-image: url(https://myportal.kwasu.edu.ng/public/img/bg.jpg); background-size: cover;" data-ng-controller="flicksAuthController">
+
+    <div class="loginColumns animated fadeInDown" data-ng-init="zoomB()">
+        <div class="row">
+
+            <div class="col-md-6" style="text-align: center">
+                <img alt="image" class="" src="https://myportal.kwasu.edu.ng/public/img/kwasu.png" style="width:100px;">
+        
+                <h2 class="font-bold">Welcome to <br>Kwara State University, Malete</h2>
+
+             </div>
+    
+            <div class="col-md-6">
+                <div class="ibox-content">
+                    <form id="frmlogin" name="frmlogin" class="m-t" role="form" method="POST">
+                        <input type="hidden" name="_token" value="EsaEz0m1X8s1IHnzxBuHTImaVSsGgBC8IDG5H40O">
+
+                        <div  data-ng-class="frmlogin.user_name.$invalid && frmlogin.user_name.$touched ? 'form-group has-error' : 'form-group'">
+                            <input id="user_name" type="text" class="form-control" name="user_name" value="" placeholder="Username" data-ng-model="login.user_name" data-ng-required="true" autofocus>
+                            <span class="help-block" data-ng-show="frmlogin.user_name.$invalid && frmlogin.user_name.$touched">Username is required</span>
+                            <!--<span class="help-block" data-ng-show="frmlogin.user_name.$error.user_name">Valid user_name is required</span>-->
+                                                    </div>
+
+                        <div data-ng-class="frmlogin.password.$invalid && frmlogin.password.$touched ? 'form-group has-error' : 'form-group'">
+                            <input id="password" type="password" class="form-control" placeholder="Password" name="password" data-ng-minlength="3" data-ng-model="login.password" data-ng-required="true">
+                            <span class="help-block"></span>
+                            
+                                                    </div>
+                        <button type="submit" class="btn btn-primary block full-width m-b" data-ng-click="confirmLogin($event)" data-ng-disabled="frmlogin.$invalid">Login</button>
+
+                        <a href="https://myportal.kwasu.edu.ng/password/reset">
+                            <small>Forgot password?</small>
+                        </a>
+
+                        <p class="text-muted text-center">
+                            <small>Do not have an account?</small>
+                        </p>
+                        <a class="btn btn-sm btn-white btn-block" href="https://myportal.kwasu.edu.ng/applicant/register">Create an account (For Applicant Only)</a>
+                    </form>
+                    <p class="m-t">
+                        <small>The best you can get</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr style="border: #1b592b 0.9px solid;"/>
+        <div class="row">
+            <div class="col-md-6">
+                Copyright Kwara State University, Malete
+            </div>
+            <div class="col-md-6 text-right">
+                <small>&copy; 2017-2020</small>
+            </div>
+        </div>
+    </div>
+   
+
+    <!-- Scripts -->
+    <script src="https://myportal.kwasu.edu.ng/public/js/app.js"></script>
+    <script src="https://myportal.kwasu.edu.ng/public/js/jquery-2.1.1.js"></script>
+    <script src="https://myportal.kwasu.edu.ng/public/js/bootstrap.min.js"></script>
+    <script src="https://myportal.kwasu.edu.ng/public/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="https://myportal.kwasu.edu.ng/public/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="https://myportal.kwasu.edu.ng/public/js/angularjs/angular.min.js"></script>
+    <script src="https://myportal.kwasu.edu.ng/public/js/angularjs/app.js"></script>
+    <script src="https://myportal.kwasu.edu.ng/public/js/plugins/oclazyload/dist/ocLazyLoad.min.js"></script>
+    <script src="https://myportal.kwasu.edu.ng/public/js/ui-router/angular-ui-router.min.js"></script>
+    <script src="https://myportal.kwasu.edu.ng/public/js/plugins/sweetalert/sweetalert.min.js"></script>
+    <script src="https://myportal.kwasu.edu.ng/public/js/app/flicksauth.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+.image_resize{
+ width: 200px;
+ height:  150px ! important;
+
+}
+.active a{
+	background-color: #000  ! important;
+	color: #fff ! important;
+}
+
+
